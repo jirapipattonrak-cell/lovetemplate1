@@ -1,0 +1,388 @@
+/* ===================================
+        LOVE TEMPLATE V2
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #ffdde1,
+        #ee9ca7,
+        #fad0c4
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 15s infinite ease;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* Background Animation */
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+position:relative;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+.cover{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+filter:brightness(.35);
+
+}
+
+.overlay{
+
+position:relative;
+
+z-index:5;
+
+text-align:center;
+
+padding:30px;
+
+max-width:900px;
+
+animation:fadeUp 1.5s;
+
+}
+
+.overlay h1{
+
+font-size:72px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+text-shadow:0 10px 25px rgba(0,0,0,.4);
+
+}
+
+.overlay p{
+
+font-size:24px;
+
+line-height:1.8;
+
+margin-bottom:40px;
+
+}
+
+button{
+
+background:white;
+
+color:#ff4f81;
+
+padding:18px 50px;
+
+border:none;
+
+border-radius:999px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 20px 45px rgba(255,255,255,.5);
+
+}
+
+/* SECTION */
+
+section{
+
+padding:100px 10%;
+
+}
+
+section h2{
+
+font-size:42px;
+
+margin-bottom:35px;
+
+text-align:center;
+
+}
+
+/* Glass */
+
+.letter p{
+
+max-width:850px;
+
+margin:auto;
+
+padding:40px;
+
+border-radius:25px;
+
+font-size:20px;
+
+line-height:2;
+
+text-align:center;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.3);
+
+}
+
+/* Gallery */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:22px;
+
+}
+
+.grid img{
+
+width:100%;
+
+aspect-ratio:1;
+
+object-fit:cover;
+
+border-radius:20px;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.grid img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* Counter */
+
+.counter{
+
+text-align:center;
+
+}
+
+#days{
+
+font-size:95px;
+
+font-weight:bold;
+
+margin:25px 0;
+
+}
+
+/* Music */
+
+.music{
+
+text-align:center;
+
+}
+
+audio{
+
+width:400px;
+
+max-width:100%;
+
+}
+
+/* Footer */
+
+footer{
+
+padding:80px 20px;
+
+text-align:center;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(10px);
+
+}
+
+footer h2{
+
+margin-bottom:20px;
+
+}
+
+/* Floating Heart */
+
+.heart{
+
+position:fixed;
+
+bottom:-40px;
+
+color:#ff7aa5;
+
+pointer-events:none;
+
+animation:float linear forwards;
+
+z-index:999;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* Fade */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.overlay h1{
+
+font-size:42px;
+
+}
+
+.overlay p{
+
+font-size:18px;
+
+}
+
+section h2{
+
+font-size:30px;
+
+}
+
+#days{
+
+font-size:60px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
